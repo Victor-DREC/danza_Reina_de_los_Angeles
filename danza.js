@@ -110,3 +110,41 @@ window.addEventListener("DOMContentLoaded", function () {
     mostrarSeccion(seccion);
   }
 });
+
+// Función para inicializar las imágenes locales (.jpg) de las portadas de los audios
+function inicializarPortadasAudios() {
+  let tarjetasAudio = document.querySelectorAll(".audio-card");
+  
+  tarjetasAudio.forEach(tarjeta => {
+    let contenedorIcono = tarjeta.querySelector(".audio-icon");
+    let rutaImagenLocal = tarjeta.dataset.img;
+
+    if (contenedorIcono && rutaImagenLocal) {
+      // Creamos el elemento img dinámicamente
+      let img = document.createElement("img");
+      img.src = rutaImagenLocal;
+      img.alt = tarjeta.querySelector("h3").innerText;
+      
+      // Control de respaldo: Si la imagen .jpg local no existe en tu carpeta, muestra un icono musical fino
+      img.onerror = function() {
+        contenedorIcono.innerHTML = "<i class='bx bx-music' style='font-size: 26px; color: var(--accent);'></i>";
+      };
+
+      // Limpiamos contenido previo e insertamos la imagen local
+      contenedorIcono.innerHTML = "";
+      contenedorIcono.appendChild(img);
+    }
+  });
+}
+
+// Aseguramos que corra al cargar la página
+window.addEventListener("DOMContentLoaded", function () {
+  inicializarPortadasAudios();
+  
+  // Tu lógica de control de parámetros URL existente
+  const parametros = new URLSearchParams(window.location.search);
+  const seccion = parametros.get("seccion");
+  if (seccion === "audios" || seccion === "galeria") {
+    mostrarSeccion(seccion);
+  }
+});
