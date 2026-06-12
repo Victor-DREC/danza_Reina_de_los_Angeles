@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritmo & Pasión | Portal de Danza</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="danza.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="brand" onclick="mostrarSeccion('home')">
+        <i class='bx bx-music brand__icon'></i>
+        <span>Ritmo & Pasión</span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <button class="nav-link active" data-section="home" onclick="mostrarSeccion('home')">Inicio</button>
+        <button class="nav-link" data-section="audios" onclick="mostrarSeccion('audios')">Audios y Mixes</button>
+        <button class="nav-link" data-section="galeria" onclick="mostrarSeccion('galeria')">Videos y Fotos</button>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="menu-btn" onclick="alternarMenu()">
+          <i class='bx bx-menu'></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <section id="home" class="view view--active">
+      <section class="hero">
+        <div class="hero__content">
+          <h2>Grupo Cultural de Danza</h2>
+          <h1>REINA DE LOS ANGELES</h1>
+          <p>El portal centralizado para los integrantes del grupo. Descarga tus audios pesados de presentación, repasa las coreografías y revive las mejores fotos de nuestras salidas.</p>
+          <div class="hero__actions">
+            <button class="primary-btn" onclick="mostrarSeccion('audios')"><i class='bx bx-play-circle'></i> Encontrar Audios</button>
+            <button class="secondary-btn" onclick="mostrarSeccion('galeria')">Ver Ensayos</button>
+          </div>
+        </div>
+
+        <div class="album-stage">
+          <article class="sticker-card sticker-card--left">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=700&q=80" alt="Ensayo de Danza">
+            <span>Ensayos</span>
+          </article>
+          <article class="sticker-card sticker-card--main">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=900&q=80" alt="Presentación Coreografía">
+            <div>
+              <strong>Gran Elenco</strong>
+              <span>Temporada 2026</span>
+            </div>
+          </article>
+          <article class="sticker-card sticker-card--right">
+            <img src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?auto=format&fit=crop&w=700&q=80" alt="Trajes Tradicionales">
+            <span>Cultura</span>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="audios" class="view">
+      <section class="audio-section">
+        <div class="section-heading">
+          <span class="eyebrow">Repetitorio Oficial</span>
+          <h2>Música para Presentaciones</h2>
+          <p>Busca por el nombre de la danza o filtra por categoría. Puedes escuchar el audio en línea o descargarlo directamente para tus ensayos.</p>
+        </div>
+
+        <div class="search-container">
+          <div class="search-box">
+            <i class='bx bx-search'></i>
+            <input type="text" id="audioSearch" placeholder="Buscar audio o mix por nombre..." onkeyup="filtrarAudios()">
+          </div>
+          <div class="filter-tags">
+            <button class="tag active" onclick="filtrarCategoria('todos', this)">Todos</button>
+            <button class="tag" onclick="filtrarCategoria('Tradicional', this)">Tradicional</button>
+            <button class="tag" onclick="filtrarCategoria('Moderno', this)">Moderno/Fusión</button>
+            <button class="tag" onclick="filtrarCategoria('Bloques', this)">Bloques Completos</button>
+          </div>
+        </div>
+
+        <div class="audio-grid" id="audioGrid">
+          
+          <article class="audio-card" data-category="Tradicional">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-music'></i></div>
+              <div>
+                <h3>Coreografía Nueva</h3>
+                <p class="audio-meta">Duración: 8:45 | Peso: 8,01 MB</p>
+                <span class="badge">Tradicional</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=5d0d9d15%2D3036%2D432f%2D9cbc%2D11d7ad82011a" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=5d0d9d15%2D3036%2D432f%2D9cbc%2D11d7ad82011a" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Bloques">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-disc'></i></div>
+              <div>
+                <h3>Fandango 1</h3>
+                <p class="audio-meta">Duración: 11:21 | Peso: 18,2 MB</p>
+                <span class="badge">Bloques</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=ec0af5e4%2D8e2c%2D4a36%2Da46a%2D2b0cd83fdaa2" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=ec0af5e4%2D8e2c%2D4a36%2Da46a%2D2b0cd83fdaa2" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>Fandango 2</h3>
+                <p class="audio-meta">Duración: 10:17 | Peso: 14,1 MB</p>
+                <span class="badge">Moderno</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=66b900af%2De4ab%2D452d%2Dbb8c%2Db9f68fe6c287" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=66b900af%2De4ab%2D452d%2Dbb8c%2Db9f68fe6c287" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>La Diablada</h3>
+                <p class="audio-meta">Duración: 12:51 | Peso: 17,6 MB</p>
+                <span class="badge">Moderno</span:>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=0c1bc362%2D40a1%2D419f%2D8089%2D9a0f4c9707f9" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=0c1bc362%2D40a1%2D419f%2D8089%2D9a0f4c9707f9" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>Moscau</h3>
+                <p class="audio-meta">Duración: 5:40 | Peso: 7,82 MB</p>
+                <span class="badge">Moderno</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=39108c42%2Dfd49%2D448c%2Daa93%2D9bd303932da2" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=39108c42%2Dfd49%2D448c%2Daa93%2D9bd303932da2" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>Peguche Coreografía</h3>
+                <p class="audio-meta">Duración: 8:45 | Peso: 11,1 MB</p>
+                <span class="badge">Moderno</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=c8378eaf%2D7cec%2D49bb%2D9895%2D1420151dee79" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=c8378eaf%2D7cec%2D49bb%2D9895%2D1420151dee79" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>Tejida del Rombo</h3>
+                <p class="audio-meta">Duración: 11:21 | Peso: 15,6 MB</p>
+                <span class="badge">Moderno</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=480745ff%2D2d92%2D411a%2D9dd3%2D1a56533b22ba" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=480745ff%2D2d92%2D411a%2D9dd3%2D1a56533b22ba" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>Tinkus 1</h3>
+                <p class="audio-meta">Duración: 7:11 | Peso: 9,86 MB</p>
+                <span class="badge">Moderno</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=d8fbeb2e%2Ddd1d%2D4294%2D8a24%2Dfe9b9f184db4" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=d8fbeb2e%2Ddd1d%2D4294%2D8a24%2Dfe9b9f184db4" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>Tinkus 2</h3>
+                <p class="audio-meta">Duración: 7:46 | Peso: 10,6 MB</p>
+                <span class="badge">Moderno</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=dc122993%2Da7ac%2D431d%2Dab2c%2D46089fe3214a" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=dc122993%2Da7ac%2D431d%2Dab2c%2D46089fe3214a" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-card" data-category="Moderno">
+            <div class="audio-card__info">
+              <div class="audio-icon"><i class='bx bx-shuffle'></i></div>
+              <div>
+                <h3>Toma de la Plaza</h3>
+                <p class="audio-meta">Duración: 21:51 | Peso: 35,5 MB</p>
+                <span class="badge">Moderno</span>
+              </div>
+            </div>
+            <div class="audio-player-zone">
+              <audio controls src="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=5cbb767b%2Dc0aa%2D4981%2Dac3e%2Dd4a022175f3f" preload="none"></audio>
+              <a href="https://onedrive.live.com/personal/2c74292426000e6e/_layouts/15/download.aspx?UniqueId=5cbb767b%2Dc0aa%2D4981%2Dac3e%2Dd4a022175f3f" download class="download-btn">
+                <i class='bx bx-download'></i> Descargar MP3
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </section>
+
+    <section id="galeria" class="view">
+      <section class="gallery-section">
+        <div class="section-heading">
+          <span class="eyebrow">Multimedia</span>
+          <h2>Videos de Guías y Fotos</h2>
+          <p>Visualiza las secuencias de pasos grabadas en los ensayos y el registro fotográfico del elenco.</p>
+        </div>
+
+        <h3 class="subsection-title">Videos de Coreografías</h3>
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Guía de Pasos" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-card__detail">
+              <h4>Tutorial: Bloque de Entrada Sanjuanito</h4>
+              <p>Grabado el 15 de Mayo. Detalle de pies y giros del bloque de mujeres.</p>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Guía de Pasos" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-card__detail">
+              <h4>Coordinación General: Cruce de Filas</h4>
+              <p>Muestra aérea del posicionamiento de parejas en el escenario.</p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="subsection-title small-heading">Galería Fotográfica</h3>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Presentación 1">
+          </div>
+          <div class="photo-item">
+            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=800&q=80" alt="Presentación 2">
+          </div>
+          <div class="photo-item">
+            <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=800&q=80" alt="Presentación 3">
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Ritmo & Pasión</strong>
+      <p>Portal Interno del Grupo de Danza v2.0</p>
+    </div>
+    <button onclick="mostrarSeccion('home')">
+      Volver al inicio <i class='bx bx-up-arrow-alt'></i>
+    </button>
+  </footer>
+
+  <script src="danza.js"></script>
+</body>
+</html>
