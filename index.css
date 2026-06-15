@@ -564,7 +564,7 @@ a {
   }
   .audio-track__right audio {
     flex-grow: 1;
-    max-width: 75%;
+    max-width: 100%;
   }
   .album-stage {
     min-height: 450px;
