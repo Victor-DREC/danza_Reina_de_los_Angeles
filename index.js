@@ -72,3 +72,9 @@ window.addEventListener("DOMContentLoaded", function () {
     mostrarSeccion("home");
   }
 });
+
+// Función opcional para ejecutar descargas de Drive de forma limpia si usas enlaces dinámicos
+function descargarDesdeDrive(idArchivo) {
+  const urlDescarga = `https://drive.google.com/uc?export=download&id=${idArchivo}`;
+  window.open(urlDescarga, '_blank');
+}
