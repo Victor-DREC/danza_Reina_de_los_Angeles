@@ -1,720 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grupo de Danza</title>
-
+  <title>Dance Studio | Portal Oficial</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
-<!-- ======================================================
-  NAVBAR
-====================================================== -->
-<header class="topbar">
-  <div class="topbar__inner">
-    <button class="brand" onclick="mostrarSeccion('inicio')">
-      <div class="brand__icon"><i class='bx bx-music'></i></div>
-      <span>Danza</span>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="brand" onclick="mostrarSeccion('home')">
+        <i class='bx bx-run brand__icon'></i>
+        <span>DANCE STUDIO</span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <button class="nav-link active" data-section="home" onclick="mostrarSeccion('home')">Inicio</button>
+        <button class="nav-link" data-section="galeria" onclick="mostrarSeccion('galeria')">Galería & Videos</button>
+        <button class="nav-link" data-section="pistas" onclick="mostrarSeccion('pistas')">Pistas de Audio</button>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="menu-btn" onclick="alternarMenu()">
+          <i class='bx bx-menu'></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="home" class="view view--active">
+      <section class="hero">
+        <div class="hero__content">
+          <span class="eyebrow">Ritmo, Pasión y Movimiento</span>
+          <h1>Portal de Ensayos y Multimedia</h1>
+          <p>Bienvenido al espacio oficial de nuestro grupo de danza. Aquí podrás revisar las coreografías, descargar las pistas de audio actualizadas y revivir nuestras mejores presentaciones.</p>
+          <div class="hero__actions">
+            <button class="primary-btn" onclick="mostrarSeccion('galeria')">Ver Videos</button>
+            <button class="secondary-btn" onclick="mostrarSeccion('pistas')">Escuchar Pistas</button>
+          </div>
+        </div>
+
+        <div class="album-stage">
+          <article class="sticker-card sticker-card--left">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" alt="Ensayo de danza">
+            <span>Ensayos</span>
+          </article>
+
+          <article class="sticker-card sticker-card--main">
+            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=600&q=80" alt="Presentación en vivo">
+            <div>
+              <strong>SHOWTIME</strong>
+              <span>Temporada 2026</span>
+            </div>
+          </article>
+
+          <article class="sticker-card sticker-card--right">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Coreografía grupal">
+            <span>Coreografías</span>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="galeria" class="view">
+      <section class="media-section">
+        <div class="section-heading">
+          <span class="eyebrow">Multimedia</span>
+          <h2>Galería & Video Ensayos</h2>
+          <p>Visualiza nuestras fotografías y reproduce los videos de las coreografías directamente de forma local.</p>
+        </div>
+
+        <h3 class="sub-section-title">Fotografías Recientes</h3>
+        <div class="photo-grid">
+          <div class="photo-card">
+            <img src="https://images.unsplash.com/photo-1502519144081-acca18599788?auto=format&fit=crop&w=600&q=80" alt="Foto 1">
+          </div>
+          <div class="photo-card">
+            <img src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?auto=format&fit=crop&w=600&q=80" alt="Foto 2">
+          </div>
+          <div class="photo-card">
+            <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=600&q=80" alt="Foto 3">
+          </div>
+        </div>
+
+        <h3 class="sub-section-title">Videos de Coreografías</h3>
+        <div class="video-grid">
+          
+          <div class="video-card">
+            <div class="video-wrapper">
+              <video src="video1.mp4" controls preload="metadata"></video>
+            </div>
+            <div class="video-card__info">
+              <h3>Coreografía Principal - Bloque 1</h3>
+              <p>Grabación del último ensayo general para la apertura.</p>
+              <a href="video1.mp4" download="Bloque_1_Ensayo.mp4" class="download-media-btn">
+                <i class='bx bx-download'></i> Descargar Video
+              </a>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <video src="video2.mp4" controls preload="metadata"></video>
+            </div>
+            <div class="video-card__info">
+              <h3>Presentación Oficial - En Vivo</h3>
+              <p>Registro de la participación intergrupal en alta definición.</p>
+              <a href="video2.mp4" download="Presentacion_Oficial.mp4" class="download-media-btn">
+                <i class='bx bx-download'></i> Descargar Video
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <section id="pistas" class="view">
+      <section class="audio-section">
+        <div class="section-heading">
+          <span class="eyebrow">Audio Cloud</span>
+          <h2>Pistas Musicales</h2>
+          <p>Escucha los mixes oficiales del grupo de danza y descárgalos en tus dispositivos para ensayar en cualquier lugar.</p>
+        </div>
+
+        <div class="audio-list">
+          
+          <article class="audio-track">
+            <div class="audio-track__left">
+              <div class="track-icon">
+                <i class='bx bx-music'></i>
+              </div>
+              <div class="track-details">
+                <h3>Mix Apertura 2026 - Versión Pesada</h3>
+                <p>Duración: 4:35 | Formato: MP3 (Alta Calidad)</p>
+              </div>
+            </div>
+            <div class="audio-track__right">
+              <audio src="pista1.mp3" controls></audio>
+              <a href="pista1.mp3" download="Mix_Apertura_2026.mp3" class="audio-download-btn" title="Descargar pista">
+                <i class='bx bx-download'></i>
+                <span>Descargar</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-track">
+            <div class="audio-track__left">
+              <div class="track-icon">
+                <i class='bx bx-music'></i>
+              </div>
+              <div class="track-details">
+                <h3>Transición y Remate Final</h3>
+                <p>Duración: 2:15 | Formato: MP3</p>
+              </div>
+            </div>
+            <div class="audio-track__right">
+              <audio src="pista2.mp3" controls></audio>
+              <a href="pista2.mp3" download="Remate_Final.mp3" class="audio-download-btn" title="Descargar pista">
+                <i class='bx bx-download'></i>
+                <span>Descargar</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="audio-track">
+            <div class="audio-track__left">
+              <div class="track-icon">
+                <i class='bx bx-music'></i>
+              </div>
+              <div class="track-details">
+                <h3>Pista de Ensayo (Ritmo Lento)</h3>
+                <p>Duración: 3:50 | Ideal para marcar pasos nuevos</p>
+              </div>
+            </div>
+            <div class="audio-track__right">
+              <audio src="pista3.mp3" controls></audio>
+              <a href="pista3.mp3" download="Ensayo_Lento.mp3" class="audio-download-btn" title="Descargar pista">
+                <i class='bx bx-download'></i>
+                <span>Descargar</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Dance Studio</strong>
+      <p>Espacio Multimedia & Almacenamiento © 2026</p>
+    </div>
+    <button onclick="mostrarSeccion('home')">
+      Volver al inicio <i class='bx bx-up-arrow-alt'></i>
     </button>
+  </footer>
 
-    <nav class="main-nav" id="mainNav">
-      <button class="nav-link active" data-section="inicio" onclick="mostrarSeccion('inicio')">
-        <i class='bx bx-home'></i> Inicio
-      </button>
-      <button class="nav-link" data-section="galeria" onclick="mostrarSeccion('galeria')">
-        <i class='bx bx-images'></i> Galería
-      </button>
-      <button class="nav-link" data-section="videos" onclick="mostrarSeccion('videos')">
-        <i class='bx bx-video'></i> Videos
-      </button>
-      <button class="nav-link" data-section="pistas" onclick="mostrarSeccion('pistas')">
-        <i class='bx bx-headphone'></i> Pistas
-      </button>
-    </nav>
-
-    <button class="menu-btn" id="menuBtn" onclick="alternarMenu()">
-      <i class='bx bx-menu'></i>
-    </button>
-  </div>
-</header>
-
-<main>
-
-  <!-- ======================================================
-    INICIO / HERO
-  ====================================================== -->
-  <section id="inicio" class="view view--active">
-    <div class="hero">
-      <div class="hero__lines">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="hero__content">
-        <span class="eyebrow">Grupo de Danza</span>
-        <h1>El arte<br>de <em>moverse</em></h1>
-        <p>Bienvenidos a nuestro espacio digital. Aquí encontrarás nuestra galería de fotos, presentaciones en video y todas nuestras pistas musicales.</p>
-        <div class="hero__actions">
-          <button class="btn-primary" onclick="mostrarSeccion('galeria')">
-            <i class='bx bx-images'></i> Ver galería
-          </button>
-          <button class="btn-ghost" onclick="mostrarSeccion('pistas')">
-            <i class='bx bx-headphone'></i> Escuchar pistas
-          </button>
-        </div>
-      </div>
-      <div class="hero__scroll">
-        <i class='bx bx-chevron-down'></i>
-        Explorar
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================
-    GALERÍA DE FOTOS
-  ====================================================== -->
-  <section id="galeria" class="view">
-    <div class="section-wrap">
-      <div class="section-heading">
-        <span class="eyebrow">Fotografías</span>
-        <h2>Momentos capturados</h2>
-        <p>Cada imagen guarda un instante único sobre el escenario. Haz clic para ampliar o descarga la foto.</p>
-      </div>
-
-      <!--
-      ╔══════════════════════════════════════════════════════╗
-      ║  CÓMO AGREGAR FOTOS DESDE GOOGLE DRIVE               ║
-      ║  1. Sube la imagen y compártela como                 ║
-      ║     "Cualquier persona con el enlace puede ver".     ║
-      ║  2. Copia el ID del archivo (parte entre /d/ y /view)║
-      ║  3. Usa en data-src y data-download:                 ║
-      ║     https://drive.google.com/thumbnail?id=ID&sz=w800 ║
-      ║     https://drive.google.com/uc?export=download&id=ID║
-      ╚══════════════════════════════════════════════════════╝
-      -->
-      <div class="photo-grid" id="photoGrid">
-
-        <!-- FOTO 1 -->
-        <article class="photo-card"
-          data-src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=1600&q=90"
-          data-thumb="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=800&q=80"
-          data-download="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=1600&q=90"
-          data-nombre="Presentación Diciembre 2024"
-          data-categoria="Escenario">
-          <div class="photo-card__thumb">
-            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=800&q=80" alt="Presentación en escenario">
-            <button class="photo-card__zoom" onclick="abrirLightbox(this.closest('.photo-card'))" title="Ver completa">
-              <i class='bx bx-zoom-in'></i>
-            </button>
-          </div>
-          <div class="photo-card__info">
-            <div class="photo-card__meta">
-              <span class="photo-card__name">Presentación — Dic 2024</span>
-              <span class="media-tag">Escenario</span>
-            </div>
-            <a class="btn-download"
-               href="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=1600&q=90"
-               download="presentacion-dic2024.jpg" target="_blank">
-              <i class='bx bx-download'></i> Descargar imagen
-            </a>
-          </div>
-        </article>
-
-        <!-- FOTO 2 -->
-        <article class="photo-card"
-          data-src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=1600&q=90"
-          data-download="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=1600&q=90"
-          data-nombre="Ensayo General Nov 2024">
-          <div class="photo-card__thumb">
-            <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=800&q=80" alt="Ensayo general">
-            <button class="photo-card__zoom" onclick="abrirLightbox(this.closest('.photo-card'))" title="Ver completa">
-              <i class='bx bx-zoom-in'></i>
-            </button>
-          </div>
-          <div class="photo-card__info">
-            <div class="photo-card__meta">
-              <span class="photo-card__name">Ensayo general — Nov 2024</span>
-              <span class="media-tag">Ensayo</span>
-            </div>
-            <a class="btn-download"
-               href="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=1600&q=90"
-               download="ensayo-nov2024.jpg" target="_blank">
-              <i class='bx bx-download'></i> Descargar imagen
-            </a>
-          </div>
-        </article>
-
-        <!-- FOTO 3 -->
-        <article class="photo-card"
-          data-src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=1600&q=90"
-          data-download="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=1600&q=90">
-          <div class="photo-card__thumb">
-            <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=800&q=80" alt="Ballet clásico">
-            <button class="photo-card__zoom" onclick="abrirLightbox(this.closest('.photo-card'))" title="Ver completa">
-              <i class='bx bx-zoom-in'></i>
-            </button>
-          </div>
-          <div class="photo-card__info">
-            <div class="photo-card__meta">
-              <span class="photo-card__name">Ballet — Festival Anual</span>
-              <span class="media-tag">Ballet</span>
-            </div>
-            <a class="btn-download"
-               href="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=1600&q=90"
-               download="ballet-festival.jpg" target="_blank">
-              <i class='bx bx-download'></i> Descargar imagen
-            </a>
-          </div>
-        </article>
-
-        <!-- FOTO 4 -->
-        <article class="photo-card"
-          data-src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=1600&q=90"
-          data-download="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=1600&q=90">
-          <div class="photo-card__thumb">
-            <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=800&q=80" alt="Danza contemporánea">
-            <button class="photo-card__zoom" onclick="abrirLightbox(this.closest('.photo-card'))" title="Ver completa">
-              <i class='bx bx-zoom-in'></i>
-            </button>
-          </div>
-          <div class="photo-card__info">
-            <div class="photo-card__meta">
-              <span class="photo-card__name">Contemporáneo — Mar 2025</span>
-              <span class="media-tag">Contemporáneo</span>
-            </div>
-            <a class="btn-download"
-               href="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?auto=format&fit=crop&w=1600&q=90"
-               download="contemporaneo-mar2025.jpg" target="_blank">
-              <i class='bx bx-download'></i> Descargar imagen
-            </a>
-          </div>
-        </article>
-
-        <!-- FOTO 5 -->
-        <article class="photo-card"
-          data-src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=1600&q=90"
-          data-download="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=1600&q=90">
-          <div class="photo-card__thumb">
-            <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=800&q=80" alt="Danza folclórica">
-            <button class="photo-card__zoom" onclick="abrirLightbox(this.closest('.photo-card'))" title="Ver completa">
-              <i class='bx bx-zoom-in'></i>
-            </button>
-          </div>
-          <div class="photo-card__info">
-            <div class="photo-card__meta">
-              <span class="photo-card__name">Folclórico — Fiestas Patronales</span>
-              <span class="media-tag">Folclórico</span>
-            </div>
-            <a class="btn-download"
-               href="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?auto=format&fit=crop&w=1600&q=90"
-               download="folklorico-patronales.jpg" target="_blank">
-              <i class='bx bx-download'></i> Descargar imagen
-            </a>
-          </div>
-        </article>
-
-        <!-- FOTO 6 -->
-        <article class="photo-card"
-          data-src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=1600&q=90"
-          data-download="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=1600&q=90">
-          <div class="photo-card__thumb">
-            <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=800&q=80" alt="Gala especial">
-            <button class="photo-card__zoom" onclick="abrirLightbox(this.closest('.photo-card'))" title="Ver completa">
-              <i class='bx bx-zoom-in'></i>
-            </button>
-          </div>
-          <div class="photo-card__info">
-            <div class="photo-card__meta">
-              <span class="photo-card__name">Gala especial — Jun 2025</span>
-              <span class="media-tag">Gala</span>
-            </div>
-            <a class="btn-download"
-               href="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=1600&q=90"
-               download="gala-jun2025.jpg" target="_blank">
-              <i class='bx bx-download'></i> Descargar imagen
-            </a>
-          </div>
-        </article>
-
-      </div><!-- /photo-grid -->
-    </div>
-  </section>
-
-  <!-- ======================================================
-    VIDEOS
-  ====================================================== -->
-  <section id="videos" class="view">
-    <div class="section-wrap">
-      <div class="section-heading">
-        <span class="eyebrow">Presentaciones</span>
-        <h2>En el escenario</h2>
-        <p>Revive nuestras actuaciones. Reproduce el video directamente o descárgalo desde Google Drive.</p>
-      </div>
-
-      <!--
-      ╔══════════════════════════════════════════════════════╗
-      ║  CÓMO USAR VIDEOS DE GOOGLE DRIVE                    ║
-      ║  • Reproducción nativa (iframe):                     ║
-      ║    data-embed="https://drive.google.com/file/d/ID/preview"  ║
-      ║  • Miniatura:                                        ║
-      ║    data-thumb="https://drive.google.com/thumbnail?id=ID&sz=w600" ║
-      ║  • Descarga directa:                                 ║
-      ║    data-download="https://drive.google.com/uc?export=download&id=ID" ║
-      ╚══════════════════════════════════════════════════════╝
-      -->
-      <div class="media-list" id="videoList">
-
-        <!-- VIDEO 1
-             Para Google Drive reemplaza data-embed con la URL preview de Drive.
-             data-thumb puede ser thumbnail de Drive o una imagen propia.
-        -->
-        <article class="media-card media-card--video"
-          data-embed="https://www.youtube.com/embed/3GwjfUFyY6M"
-          data-thumb="https://img.youtube.com/vi/3GwjfUFyY6M/mqdefault.jpg"
-          data-download=""
-          data-titulo="Presentación Anual 2024"
-          data-descripcion="Gala de fin de año — Teatro Municipal"
-          data-duracion="12:34"
-          data-categoria="Ballet clásico">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap">
-              <img class="media-card__thumb" src="https://img.youtube.com/vi/3GwjfUFyY6M/mqdefault.jpg" alt="Presentación Anual 2024">
-              <div class="media-card__play-badge"><i class='bx bx-play'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Presentación Anual 2024</h3>
-              <p class="media-card__desc">Gala de fin de año — Teatro Municipal</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 12:34</span>
-                <span class="media-tag">Ballet clásico</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="reproducirVideo(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <!-- Si es Drive: href="https://drive.google.com/uc?export=download&id=TU_ID" -->
-            <a class="btn-download" href="" download target="_blank" id="dl-v1">
-              <i class='bx bx-download'></i> Descargar video
-            </a>
-          </div>
-        </article>
-
-        <!-- Área de reproducción VIDEO 1 -->
-        <div class="video-player-wrap" id="player-0" style="display:none;">
-          <div class="video-player">
-            <button class="video-player__close" onclick="cerrarVideo(0)"><i class='bx bx-x'></i></button>
-            <iframe id="iframe-0" src="" title="Reproducción de video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <!-- VIDEO 2 -->
-        <article class="media-card media-card--video"
-          data-embed="https://www.youtube.com/embed/I3SjY4IQTCA"
-          data-thumb="https://img.youtube.com/vi/I3SjY4IQTCA/mqdefault.jpg"
-          data-download=""
-          data-titulo="Festival Folclórico"
-          data-descripcion="Fiestas Patronales — Plaza Central"
-          data-duracion="8:20"
-          data-categoria="Folclórico">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap">
-              <img class="media-card__thumb" src="https://img.youtube.com/vi/I3SjY4IQTCA/mqdefault.jpg" alt="Festival Folclórico">
-              <div class="media-card__play-badge"><i class='bx bx-play'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Festival Folclórico</h3>
-              <p class="media-card__desc">Fiestas Patronales — Plaza Central</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 8:20</span>
-                <span class="media-tag">Folclórico</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="reproducirVideo(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download" href="" download target="_blank">
-              <i class='bx bx-download'></i> Descargar video
-            </a>
-          </div>
-        </article>
-        <div class="video-player-wrap" id="player-1" style="display:none;">
-          <div class="video-player">
-            <button class="video-player__close" onclick="cerrarVideo(1)"><i class='bx bx-x'></i></button>
-            <iframe id="iframe-1" src="" title="Reproducción de video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <!-- VIDEO 3 -->
-        <article class="media-card media-card--video"
-          data-embed="https://www.youtube.com/embed/ixHqIkn9m4g"
-          data-thumb="https://img.youtube.com/vi/ixHqIkn9m4g/mqdefault.jpg"
-          data-download=""
-          data-titulo="Muestra Contemporánea"
-          data-descripcion="Casa de la Cultura — Marzo 2025"
-          data-duracion="15:07"
-          data-categoria="Contemporáneo">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap">
-              <img class="media-card__thumb" src="https://img.youtube.com/vi/ixHqIkn9m4g/mqdefault.jpg" alt="Muestra Contemporánea">
-              <div class="media-card__play-badge"><i class='bx bx-play'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Muestra Contemporánea</h3>
-              <p class="media-card__desc">Casa de la Cultura — Marzo 2025</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 15:07</span>
-                <span class="media-tag">Contemporáneo</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="reproducirVideo(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download" href="" download target="_blank">
-              <i class='bx bx-download'></i> Descargar video
-            </a>
-          </div>
-        </article>
-        <div class="video-player-wrap" id="player-2" style="display:none;">
-          <div class="video-player">
-            <button class="video-player__close" onclick="cerrarVideo(2)"><i class='bx bx-x'></i></button>
-            <iframe id="iframe-2" src="" title="Reproducción de video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-
-        <!-- VIDEO 4 -->
-        <article class="media-card media-card--video"
-          data-embed="https://www.youtube.com/embed/BsUF5MbPJpE"
-          data-thumb="https://img.youtube.com/vi/BsUF5MbPJpE/mqdefault.jpg"
-          data-download=""
-          data-titulo="Ensayo Abierto"
-          data-descripcion="Muestra de proceso creativo"
-          data-duracion="9:48"
-          data-categoria="Detrás de escena">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap">
-              <img class="media-card__thumb" src="https://img.youtube.com/vi/BsUF5MbPJpE/mqdefault.jpg" alt="Ensayo Abierto">
-              <div class="media-card__play-badge"><i class='bx bx-play'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Ensayo Abierto</h3>
-              <p class="media-card__desc">Muestra de proceso creativo</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 9:48</span>
-                <span class="media-tag">Detrás de escena</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="reproducirVideo(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download" href="" download target="_blank">
-              <i class='bx bx-download'></i> Descargar video
-            </a>
-          </div>
-        </article>
-        <div class="video-player-wrap" id="player-3" style="display:none;">
-          <div class="video-player">
-            <button class="video-player__close" onclick="cerrarVideo(3)"><i class='bx bx-x'></i></button>
-            <iframe id="iframe-3" src="" title="Reproducción de video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-
-      </div><!-- /media-list -->
-    </div>
-  </section>
-
-  <!-- ======================================================
-    PISTAS DE AUDIO
-  ====================================================== -->
-  <section id="pistas" class="view">
-    <div class="section-wrap">
-      <div class="section-heading">
-        <span class="eyebrow">Música</span>
-        <h2>Nuestras pistas</h2>
-        <p>Escucha y descarga las pistas musicales utilizadas en nuestras coreografías.</p>
-      </div>
-
-      <!--
-      ╔══════════════════════════════════════════════════════╗
-      ║  CÓMO USAR AUDIOS DE GOOGLE DRIVE                    ║
-      ║  data-src (reproducción):                            ║
-      ║    https://drive.google.com/uc?export=download&id=ID ║
-      ║  data-download (descarga):                           ║
-      ║    https://drive.google.com/uc?export=download&id=ID ║
-      ║  data-thumb (miniatura opcional):                    ║
-      ║    https://drive.google.com/thumbnail?id=ID&sz=w200  ║
-      ╚══════════════════════════════════════════════════════╝
-      -->
-      <div class="media-list" id="trackList">
-
-        <!-- PISTA 1 -->
-        <article class="media-card media-card--audio"
-          data-src="https://s142.convertio.me/p/ZpvqzYPw6ADl3d-vDAaryg/1705760b7e9a1963ba546009b8fc56bc/NUEVA-COREOGRAFIA.mp3"
-          data-download="https://s142.convertio.me/p/ZpvqzYPw6ADl3d-vDAaryg/1705760b7e9a1963ba546009b8fc56bc/NUEVA-COREOGRAFIA.mp3"
-          data-thumb=""
-          data-titulo="Coreografía Nueva"
-          data-descripcion="Pieza principal de la gala anual"
-          data-duracion="8:45"
-          data-peso="8,01 MB"
-          data-categoria="Tradicional">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap media-card__thumb-wrap--audio">
-              <!-- Si tienes imagen de Drive: pon la URL en data-thumb del article -->
-              <img class="media-card__thumb" src="" alt="Coreografía Nueva" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-              <div class="media-card__thumb-fallback"><i class='bx bx-music'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Coreografía Nueva</h3>
-              <p class="media-card__desc">Pieza principal de la gala anual</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 8:45</span>
-                <span class="media-meta"><i class='bx bx-data'></i> 8,01 MB</span>
-                <span class="media-tag">Tradicional</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="toggleAudio(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download"
-               href="https://s142.convertio.me/p/ZpvqzYPw6ADl3d-vDAaryg/1705760b7e9a1963ba546009b8fc56bc/NUEVA-COREOGRAFIA.mp3"
-               download="coreografia-nueva.mp3" target="_blank">
-              <i class='bx bx-download'></i> Descargar MP3
-            </a>
-          </div>
-          <!-- Reproductor expandible -->
-          <div class="audio-player-wrap" style="display:none;">
-            <audio controls preload="none">
-              <source src="https://s142.convertio.me/p/ZpvqzYPw6ADl3d-vDAaryg/1705760b7e9a1963ba546009b8fc56bc/NUEVA-COREOGRAFIA.mp3" type="audio/mpeg">
-              Tu navegador no soporta audio HTML5.
-            </audio>
-          </div>
-        </article>
-
-        <!-- PISTA 2 -->
-        <article class="media-card media-card--audio"
-          data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
-          data-download="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
-          data-thumb=""
-          data-titulo="Danza Folclórica"
-          data-descripcion="Presentación de fiestas patronales"
-          data-duracion="4:15"
-          data-peso="3,88 MB"
-          data-categoria="Folclórico">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap media-card__thumb-wrap--audio">
-              <img class="media-card__thumb" src="" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-              <div class="media-card__thumb-fallback"><i class='bx bx-music'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Danza Folclórica</h3>
-              <p class="media-card__desc">Presentación de fiestas patronales</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 4:15</span>
-                <span class="media-meta"><i class='bx bx-data'></i> 3,88 MB</span>
-                <span class="media-tag">Folclórico</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="toggleAudio(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download"
-               href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
-               download="danza-folklorica.mp3" target="_blank">
-              <i class='bx bx-download'></i> Descargar MP3
-            </a>
-          </div>
-          <div class="audio-player-wrap" style="display:none;">
-            <audio controls preload="none">
-              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
-            </audio>
-          </div>
-        </article>
-
-        <!-- PISTA 3 -->
-        <article class="media-card media-card--audio"
-          data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-          data-download="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-          data-thumb=""
-          data-titulo="Contemporáneo"
-          data-descripcion="Casa de la Cultura — Marzo 2025"
-          data-duracion="5:01"
-          data-peso="4,58 MB"
-          data-categoria="Contemporáneo">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap media-card__thumb-wrap--audio">
-              <img class="media-card__thumb" src="" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-              <div class="media-card__thumb-fallback"><i class='bx bx-music'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Contemporáneo</h3>
-              <p class="media-card__desc">Casa de la Cultura — Marzo 2025</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 5:01</span>
-                <span class="media-meta"><i class='bx bx-data'></i> 4,58 MB</span>
-                <span class="media-tag">Contemporáneo</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="toggleAudio(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download"
-               href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-               download="contemporaneo.mp3" target="_blank">
-              <i class='bx bx-download'></i> Descargar MP3
-            </a>
-          </div>
-          <div class="audio-player-wrap" style="display:none;">
-            <audio controls preload="none">
-              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
-            </audio>
-          </div>
-        </article>
-
-        <!-- PISTA 4 -->
-        <article class="media-card media-card--audio"
-          data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
-          data-download="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
-          data-thumb=""
-          data-titulo="Ballet Clásico"
-          data-descripcion="Gala de fin de año — Teatro Municipal"
-          data-duracion="6:28"
-          data-peso="5,91 MB"
-          data-categoria="Ballet">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap media-card__thumb-wrap--audio">
-              <img class="media-card__thumb" src="" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-              <div class="media-card__thumb-fallback"><i class='bx bx-music'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Ballet Clásico</h3>
-              <p class="media-card__desc">Gala de fin de año — Teatro Municipal</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 6:28</span>
-                <span class="media-meta"><i class='bx bx-data'></i> 5,91 MB</span>
-                <span class="media-tag">Ballet</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="toggleAudio(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download"
-               href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
-               download="ballet-clasico.mp3" target="_blank">
-              <i class='bx bx-download'></i> Descargar MP3
-            </a>
-          </div>
-          <div class="audio-player-wrap" style="display:none;">
-            <audio controls preload="none">
-              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
-            </audio>
-          </div>
-        </article>
-
-        <!-- PISTA 5 -->
-        <article class="media-card media-card--audio"
-          data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
-          data-download="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
-          data-thumb=""
-          data-titulo="Gala Final"
-          data-descripcion="Cierre de temporada 2025"
-          data-duracion="4:53"
-          data-peso="4,47 MB"
-          data-categoria="Gala">
-          <div class="media-card__left">
-            <div class="media-card__thumb-wrap media-card__thumb-wrap--audio">
-              <img class="media-card__thumb" src="" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-              <div class="media-card__thumb-fallback"><i class='bx bx-music'></i></div>
-            </div>
-            <div class="media-card__text">
-              <h3 class="media-card__title">Gala Final</h3>
-              <p class="media-card__desc">Cierre de temporada 2025</p>
-              <div class="media-card__pills">
-                <span class="media-meta"><i class='bx bx-time'></i> 4:53</span>
-                <span class="media-meta"><i class='bx bx-data'></i> 4,47 MB</span>
-                <span class="media-tag">Gala</span>
-              </div>
-            </div>
-          </div>
-          <div class="media-card__actions">
-            <button class="btn-play-card" onclick="toggleAudio(this.closest('.media-card'))">
-              <i class='bx bx-play'></i> Reproducir
-            </button>
-            <a class="btn-download"
-               href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
-               download="gala-final.mp3" target="_blank">
-              <i class='bx bx-download'></i> Descargar MP3
-            </a>
-          </div>
-          <div class="audio-player-wrap" style="display:none;">
-            <audio controls preload="none">
-              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg">
-            </audio>
-          </div>
-        </article>
-
-      </div><!-- /media-list -->
-    </div>
-  </section>
-
-</main>
-
-<!-- ======================================================
-  LIGHTBOX (Galería)
-====================================================== -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox__backdrop" onclick="cerrarLightbox()"></div>
-  <div class="lightbox__content">
-    <button class="lightbox__close" onclick="cerrarLightbox()"><i class='bx bx-x'></i></button>
-    <img id="lightboxImg" src="" alt="Foto ampliada">
-    <div class="lightbox__footer">
-      <span id="lightboxLabel"></span>
-      <a id="lightboxDownload" class="btn-download" href="" download target="_blank">
-        <i class='bx bx-download'></i> Descargar imagen
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- ======================================================
-  FOOTER
-====================================================== -->
-<footer class="footer">
-  <div>
-    <div class="footer__brand">Grupo de Danza</div>
-    <p>Arte, movimiento y pasión</p>
-  </div>
-  <button class="btn-ghost" onclick="mostrarSeccion('inicio')">
-    Volver al inicio <i class='bx bx-up-arrow-alt'></i>
-  </button>
-</footer>
-
-<script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
