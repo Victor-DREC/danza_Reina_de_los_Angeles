@@ -92,6 +92,21 @@ a {
   border-radius: 50%;
   font-size: 24px;
   box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+  
+  /* Inclinamos el icono para darle sentido de dirección dancística y fluidez */
+  transform: rotate(-45px); 
+  animation: vibracionDanza 4s ease-in-out infinite;
+}
+
+@keyframes vibracionDanza {
+  0%, 100% {
+    transform: rotate(-45deg) scale(1);
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));
+  }
+  50% {
+    transform: rotate(-35deg) scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+  }
 }
 
 .main-nav {
