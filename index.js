@@ -71,6 +71,24 @@ window.addEventListener("DOMContentLoaded", function () {
   } else {
     mostrarSeccion("home");
   }
+
+  // ======================================================
+  // LOGICA PARA QUE NO SE MEZCLEN LAS PISTAS DE AUDIO
+  // ======================================================
+  const audios = document.querySelectorAll("audio");
+
+  audios.forEach(audioActual => {
+    // Escuchamos cuando esta pista en específico empiece a sonar
+    audioActual.addEventListener("play", function () {
+      // Recorremos todas las pistas de la página
+      audios.forEach(otroAudio => {
+        // Si es una pista diferente a la que se acaba de activar, la pausamos
+        if (otroAudio !== audioActual) {
+          otroAudio.pause();
+        }
+      });
+    });
+  });
 });
 
 // Función opcional para ejecutar descargas de Drive de forma limpia si usas enlaces dinámicos
@@ -78,3 +96,4 @@ function descargarDesdeDrive(idArchivo) {
   const urlDescarga = `https://drive.google.com/uc?export=download&id=${idArchivo}`;
   window.open(urlDescarga, '_blank');
 }
+

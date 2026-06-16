@@ -43,30 +43,26 @@
         <div class="hero__content">
           <span class="eyebrow">Grupo Cultural de Danza</span>
           <h1>REINA DE LOS ANGELES</h1>
-          <p>Bienvenido al espacio oficial de nuestro grupo de danza. Aquí podrás revisar las coreografías, descargar las pistas de audio actualizadas y revivir nuestras mejores presentaciones.</p>
-          <div class="hero__actions">
-            <button class="primary-btn" onclick="mostrarSeccion('galeria')">Ver Videos</button>
-            <button class="secondary-btn" onclick="mostrarSeccion('pistas')">Escuchar Pistas</button>
-          </div>
-        </div>
+          <img src="img/logo.png" alt="Logo Reina de los Ángeles" class="hero__logo">
+          <p class="dance-history__text">
+            El <span class="dance-history__highlight--accent">Grupo Cultural de Danza Reina de los Ángeles</span> fue fundado el <span class="dance-history__highlight">28 de agosto de 1999</span> con el objetivo de rescatar, preservar y difundir las tradiciones y costumbres de nuestra tierra a través de la danza. Desde entonces, ha representado con orgullo a la comunidad de <span class="dance-history__highlight">El Chaupi</span> en distintos escenarios dentro y fuera de la provincia.
+          </p>
+          
+          <p class="dance-history__text">
+            Actualmente, el grupo continúa su legado con una <span class="dance-history__highlight">tercera generación</span> de integrantes, promoviendo el amor por la cultura y las tradiciones ancestrales. Su repertorio incluye danzas latinoamericanas como <span class="dance-history__highlight">Tinkus, Sayas, Caporales y Tobas</span>, destacándose especialmente por la interpretación de ritmos nacionales y expresiones culturales de los Kayambis, Otavalos, Zuleta y los emblemáticos <span class="dance-history__highlight--accent">Chagras</span>, símbolo de identidad y orgullo de nuestra tierra.
+          </p>
 
         <div class="album-stage">
           <article class="sticker-card sticker-card--left">
-            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80" alt="Ensayo de danza">
-            <span>Ensayos</span>
+            <img src="img/diablo.png.jpeg" alt="Ensayo de danza">
           </article>
 
           <article class="sticker-card sticker-card--main">
-            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=600&q=80" alt="Presentación en vivo">
-            <div>
-              <strong>SHOWTIME</strong>
-              <span>Temporada 2026</span>
-            </div>
+            <img src="img/portada.png.jpeg" alt="Presentación en vivo">
           </article>
 
           <article class="sticker-card sticker-card--right">
-            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Coreografía grupal">
-            <span>Coreografías</span>
+            <img src="img/diablo2.jpeg" alt="Coreografía grupal">
           </article>
         </div>
       </section>
@@ -76,51 +72,496 @@
       <section class="media-section">
         <div class="section-heading">
           <span class="eyebrow">Multimedia</span>
-          <h2>Galería & Video Ensayos</h2>
-          <p>Visualiza nuestras fotografías y reproduce los videos de las coreografías directamente de forma local.</p>
+          <h2>Galería & Video</h2>
+          <p>Visualiza nuestras fotografías y reproduce los videos de las coreografías.</p>
+          
+          <div class="hero__actions" style="margin-top: 20px; justify-content: flex-start;">
+            <button class="primary-btn" onclick="document.getElementById('titulo-fotos').scrollIntoView({ behavior: 'smooth' })">Ver Galería</button>
+            <button class="secondary-btn" onclick="document.getElementById('titulo-videos').scrollIntoView({ behavior: 'smooth' })">Ver Videos</button>
+          </div>
         </div>
 
-        <h3 class="sub-section-title">Fotografías Recientes</h3>
+        <h3 class="sub-section-title" id="titulo-fotos">Fotografías</h3>
         <div class="photo-grid">
           <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1502519144081-acca18599788?auto=format&fit=crop&w=600&q=80" alt="Foto 1">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQaJPfqRUUoT7u01dZ3_HvNAYWHqchcuBr144UCznRBlLk?width=1032&height=774" alt="Foto 1">
           </div>
           <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1535525153412-5a42439a210d?auto=format&fit=crop&w=600&q=80" alt="Foto 2">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTrGOC3KHssRbpGj7SK5eP2ASddvA4XAFSkjTiLMmWNyWo?width=1280&height=768" alt="Foto 2">
           </div>
           <div class="photo-card">
-            <img src="https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=600&q=80" alt="Foto 3">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQFu1By8eFxTJFMSQQdjtPLAWjWBgGNiapqxt9Saoba-Nw?width=899&height=1599" alt="Foto 3">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQReTWkWEJliT4-GB0_ujl3sAZr6bwOu0lNcC8VdttzbTos?width=899&height=1599" alt="Foto 4">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQS4uhecNRRwTKY0DOvxgPVJAWHoHG4aYccMM3yQbVvC8Zo?width=1600&height=1200" alt="Foto 5">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSNJ3sPueD5RYOcZZwE3O2bAdgzka-05CyM1uaIJ-fD2mE?width=719&height=1280" alt="Foto 6">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRWVbTG6iqaToEcy7vSxEjUAXjV76SgW2GdyNiu5UkOi5Q?width=1040&height=780" alt="Foto 7">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTIAyqyB-GBTZooqSG1TVXiAR6U0b6Rps60UbOOC-8Y44I?width=1040&height=780" alt="Foto 8">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQJhddyKtxpQpMBXwv81-tdAe25wFnRiaLZwn70NK61ZJE?width=2304&height=1728" alt="Foto 9">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSvOO1xnnMzS7WcAUN5Ix_uAWKb1C6sD9SdkWBUHw-XTeA?width=2304&height=1728" alt="Foto 10">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSjDDaewZF0SonWaVsRdm5pAfkH6r9kV_w2MIOvlrkL9fk?width=2304&height=1728" alt="Foto 11">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSblrhoudLEQJye5xBUicDuAUXz2fJEelxg8d8Fvf-SftI?width=2304&height=1728" alt="Foto 12">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTqAyqUmLm_SqzUYa_7jjbYAc3RgZGVUt129OLMYro5Ojc?width=2304&height=1728" alt="Foto 13">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSIESTvYoBqRYLCnuobJlbjAaGa6Mh1En3W8dYgApMieTU?width=1728&height=2304" alt="Foto 14">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR8rsOc17U7QIdzcx9vMqqdAUPmgEuiPY0ThvrCVzBrLz8?width=1728&height=2304" alt="Foto 15">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSmnfF_yJOmTIc8B2JeULWxAbyW8gezJMdYG8I38-V_rbk?width=1728&height=2304" alt="Foto 16">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTY503QL7xwTKKL17TesXj0AabZQkQCwttcO79x_xQge5s?width=1728&height=2304" alt="Foto 17">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQTjTJ_Ka-sQaNFy3Q1c-1NAaq5G3EmKYImQ1nMKcM-u24?width=1728&height=2304" alt="Foto 18">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTE9yPEQr8SSqd9l2ImXS5rARMU8R5pY5AbVMHZJZjmxhQ?width=2304&height=1728" alt="Foto 19">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTeiUqXyZRrSIAtUCBMPYoaASHHNWLGjf0CzoOUs16GUtw?width=1728&height=2304" alt="Foto 20">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQStDKauq3kKS6ESUuZAMLbfAdGZiwnnm_w4PIeXBJIJL00?width=1728&height=2304" alt="Foto 21">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTlaAVwhEVNR6SUYYGTs28fAbZrT3HBtjz6yaJCk6f9BBE?width=1728&height=2304" alt="Foto 22">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSPKWPgjvXzTYRCidCtgzDLARbKVX-xMCOA2MKEZP72e3k?width=3072&height=2304" alt="Foto 23">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQ7V9DrSxpbTpe8b3YL95VMASO2mr3joYTwZmDwFBl_c34?width=3072&height=2304" alt="Foto 24">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQ7V9DrSxpbTpe8b3YL95VMASO2mr3joYTwZmDwFBl_c34?width=3072&height=2304" alt="Foto 25">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQ8e9DTL5CFQYf5t01tJBNGAatCJh5twWebjMB4GRfDZTo?width=3072&height=2304" alt="Foto 26">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR6bx8dT1KoS4vT12QKtdjKAcFkYFQQDE60WonXucM0jTQ?width=3072&height=2304" alt="Foto 27">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRuyLebMZ9ySrf7xbG9aQZIAdqGtSCYXWU1TPD2SFsOxlA?width=3072&height=2304" alt="Foto 28">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQI5XBKVZQfQKJcrMgpLjFiASwwp-uAFE3Q8X4RQ65JCrg?width=3072&height=2304" alt="Foto 29">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTe0eMpqqbhTpBMQgv7PoTeATguauwPaKp_QmqGtvgJ8eM?width=3072&height=2304" alt="Foto 30">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQfaC3aZ5AJSKdswNUUibmFARUwvNfF1pLmSF3JrOoOQfM?width=3072&height=2304" alt="Foto 31">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR_JcsRHkw0RbtO7m1_2ateAftBDsHC_ycokek05sNckyk?width=3072&height=2304" alt="Foto 32">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRA_hJxGoo5QqPzSn8NYe7zAfGYRtFJOnVZO6ZGX7IbsPs?width=3072&height=2304" alt="Foto 33">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQT52t-kujiBSYo6UbF8eyNRAQiNBr6MIfHvvJFTP99qNh0?width=2304&height=1728" alt="Foto 34">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSVGOlJPEL6Rr7VmpgfAZSUAbL9zyjs8nv9VsWxxpdwmAo?width=1728&height=2304" alt="Foto 35">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQCprBbR07qQK49AK0FJSZoAe5Q4RuM6pTg5oXuwwuvmjQ?width=1728&height=2304" alt="Foto 36">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSnBRuM1QVuR5YDddvqgVvTAaRrHc5vCf5ZPEOFV4c_r4M?width=1728&height=2304" alt="Foto 37">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTXQhvwPgcrQYlnwPJ4emXHAR75xWFmgJMg8yiakovo6IE?width=2304&height=1728" alt="Foto 38">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQStkmg0mv0RS65oYiv_f-S2AYOUJeaUuJNP3yZiwJIEoTg?width=2304&height=1728" alt="Foto 39">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQS8U2mFMOzrQqZ7Ge7YbKGHAWDWBWwTDnJ-RSqRwMHC6aI?width=2304&height=1728" alt="Foto 40">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTdciZ1TypJTpd6Qkzw2CF2ARsT7TNbbHzG6Gj5FDkmXiU?width=2304&height=1728" alt="Foto 41">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTtVem39qXIQr-QedKguo3eAXPSKytUv_y_iwQvzLAhJ-4?width=2304&height=1728" alt="Foto 42">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQS-kPzfTw8LSLiAvjbCdFJzAaB9nNUFqXqydLOensd-U7I?width=2304&height=1728" alt="Foto 43">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTDqwYosG-2QKjLsYb88h2lAcjROLtgRv9btrHn1gfK4Tw?width=4000&height=2248" alt="Foto 44">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSV3mhyzwtnQa9T8pFDLoQeAcTuIqTU3O8oh2xbR6ijkHM?width=4000&height=2248" alt="Foto 45">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQqVhhssXeLTJfeKgJDX8ulAd6E7rxnKGTr5UApztDekr0?width=4000&height=2248" alt="Foto 46">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRAdCwuQaWbS66G4ytCPW7OAcVj7kYMJ9s-Yb42vGL4xNY?width=4000&height=2248" alt="Foto 47">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRarEBtqIJMQosqPJIp87i0AehHNAf-PSD9D39h8sc6--I?width=4000&height=2248" alt="Foto 48">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQT8muQiSo9JTLgIkai5abwdAbEw_dYnM9BdMEgONT5qOwo?width=4000&height=2248" alt="Foto 49">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQ7ExlbdZuPS6HTC82UBxRrAaK8N0t7Trg4CzV15lSse2o?width=4000&height=2248" alt="Foto 50">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSYuLkySlK9SrfGNnvdzVnOAQxLaqJpLyfaQbS0eM6emP0?width=4000&height=2248" alt="Foto 51">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRyYer16uT0SoWCangXrSHYAe23sROid-9xycOEUKI293I?width=4000&height=2248" alt="Foto 52">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQS0aSV1hoMcQ67F8kf96X-SAbhtlkP_3Cn4ExZLve_TFS0?width=4000&height=2248" alt="Foto 53">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQg8SO7Ojz0Q6hXLpa3Bmw2Abc0oA54aSrLNR8Dn1fg8zo?width=4000&height=2248" alt="Foto 54">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRAS-1hvJn_TZE1oTrqXyNDAQQ5EZZS28fjU6dCAShJ3Eo?width=4000&height=2248" alt="Foto 55">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSjm_GcKZ75Q5bDQd8B6qGPAcSwJT09i9VbYtHh4Vw6FDI?width=4000&height=2248" alt="Foto 56">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR8pt0m2Tm0T7esVhSeLVVxAYqa27C9EfskDqgKDDMOvNc?width=1920&height=1080" alt="Foto 57">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRlj0ODT0NnTa4B2RGysFzJATpV2rqeEV5X1Dm3KBR7_mM?width=1920&height=1080" alt="Foto 58">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSFewqA7L72SpZiaaIIHY1zAQ8S1rgP-67J5Tki-TP11pM?width=1920&height=1080" alt="Foto 59">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR9bD6o7vl2TpkJmM-wgbMmAf-1W0KFJFLrgf-OF9LHXLU?width=2272&height=1704" alt="Foto 60">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRpxbdAIha0S5g1wWLzo8BfAdtKUE2_xrgszqUj0ueLWOA?width=2272&height=1704" alt="Foto 61">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTgNwUG2gMFSIfUXCxKgymbAY3xa19VLYxml3AVLJiPV9I?width=2272&height=1704" alt="Foto 62">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRMREQbNBT_QYi-2yiVNGE_AYrGD4CytmLW_Xm1mW8vubQ?width=2272&height=1704" alt="Foto 63">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSOEqByHxmgRbgh9P9zoOqRAW_jFHXeNRtIYfzoRYDFoAU?width=2272&height=1704" alt="Foto 64">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQGUEQzE0F3S5h-19LH79D3AR8PbTiAeUaevd__n14zJQo?width=2272&height=1704" alt="Foto 65">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQSSq46I7XWQL04rA5I_IGoAX2Zm7CxCV6HFpj72gjboPQ?width=2272&height=1704" alt="Foto 66">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQr99kDQEwmS5F6fTRwF9LkAcc-A4YS0BUGcnVSpjwG4nQ?width=2272&height=1704" alt="Foto 67">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTikpJ-bp1-S7uWaG4sbkTmAfqcdlNPWhfmqgGUqfi2MXY?width=2272&height=1704" alt="Foto 68">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQlp8_DzvF4RrzBDLT02AX1AcegxhuDpNf6AcT11QNwZ_4?width=2272&height=1704" alt="Foto 69">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSD1nZ9aCCkR7_UDdOPHQEyAToWbqJJE9dudfz5rG6ZtIM?width=2272&height=1704" alt="Foto 70">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTfosfe_wPoSKwdAnuV-fKEAUZFY9HCB2tsWkEa2Ncybq0?width=2272&height=1704" alt="Foto 71">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSRJmpoPrJCRbIynH-rKS3LAalxMuzJsGh-PkvNpn-DRoQ?width=2272&height=1704" alt="Foto 72">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRNTibBnuOwRLaQewn6WtEHAYvmuc5lxxxCFP7PjS-TEY0?width=2272&height=1704" alt="Foto 73">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQiITyjMdMlRbX6gayPUlX5AcpIxmxoJ6F5rFEUS-Pm7ZA?width=2272&height=1704" alt="Foto 75">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQhG23EUXB0TZCk7JP26ZBkAbXerf9Ig9yKXNYB9DSXV58?width=2272&height=1704" alt="Foto 76">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSGjsAqM9oHT7m49AvSzuA6AQpvH-NrDCPUcZWZRiU6jxQ?width=2272&height=1704" alt="Foto 78">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRH6aO66ucSRIzmXieJioFlAeHiZUjyIcmLd64UGK81xL0?width=2272&height=1704" alt="Foto 79">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRyhWXVBzQMRYkc7HhxiqTyATH3Bnj-6wkibNnCgLmQLQY?width=2272&height=1704" alt="Foto 80">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTABSJiA-y3QZJlIjP9JFN3AZ681OgppabM1nK6wt2rxbs?width=2272&height=1704" alt="Foto 81">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSfl6MiyAXWSYkTR06CiX7xARkPJsHvJbiFAZTdy3WQTSU?width=2272&height=1704" alt="Foto 82">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRKe1TAfYclR7A20OB1mFhqAV2cIurcatmu2s-vJHuQv6U?width=640&height=480" alt="Foto 83">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSX7GZssAPeRoP1kRURMiZVAUqStyjUBVmgHA7QdCSzgMs?width=640&height=480" alt="Foto 84">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQqpwFEapBwT5a9ACzPVisPAU-Jdq46e4gUbQyaDYS2ITo?width=640&height=480" alt="Foto 85">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRzUZxmI4xRTroL8maAnSBXAQUkyFnYwE5o_V0MUMooa3g?width=640&height=480" alt="Foto 86">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQUuEGtqULYRo7nczF9ZgI1AevD1hyNoCVsIvyPIl_NoiM?width=640&height=480" alt="Foto 87">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRvsz9_IXzSTbNAfnT_H4FfASbmp5jkYuwYzew1RZXHHDA?width=640&height=480" alt="Foto 88">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSzFII_7oeLTbW80_hJXLD5ATPx8EpYuGKwP55y905vgIM?width=640&height=480" alt="Foto 89">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQ0Tu41midkTIyEKgLe0e8KAVRHgkPN8iKghwKTlNry7DU?width=640&height=480" alt="Foto 90">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTLfqarWkLmR6BOjP7XsRfOAbSl2LL3PDtMYbNc4joE94w?width=640&height=480" alt="Foto 91">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQs-9wOKXHpRJomNZvWyjNoAUQrwhaxalzTS4PMe6CHjUA?width=640&height=480" alt="Foto 92">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQW00HGo6yRSo0MbQpelUvWAbO8LS637PbtJl3C4eRqmuU?width=640&height=480" alt="Foto 93">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQScg773YirXTavYj8Uk4y1dAZVNjMiUtLLZllZQVu0vQKo?width=640&height=480" alt="Foto 94">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTCQawXrEcgS7nvDaTrV-3vARJUerBt9A27w1klI-8rg5U?width=640&height=480" alt="Foto 95">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRq557vBG29QZeMkLDbx7T3AQRC4J1aGUMKMthyVIw6s34?width=640&height=480" alt="Foto 96">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQDBxme8uCRTpF1Tv9xGruKATAUNflpUo_U7REhMB9uDoY?width=640&height=480" alt="Foto 97">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQT8LujSZn2pT407PyLDsXh_ATylUosUUu41pC9zW9PyqLw?width=640&height=480" alt="Foto 98">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSM-coldGxJRbcy--eUa0cUAdDQuWsRJzkUuFpgOiheA5Q?width=640&height=480" alt="Foto 99">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTwNClOTl-ZTJhMOkRiW4IzAR6_1sX3t_5bR7CzLLJmSkk?width=640&height=480" alt="Foto 100">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQT50T_GLtYBQ4CO9prqlY0LARG2FID8dymxd8K2MOodpK4?width=640&height=480" alt="Foto 101">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQ-yxjRDZvpRbhwyN4JqTrbAWtPv9h2LNoEDCfktq2qwsg?width=640&height=480" alt="Foto 102">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRtKR1dJv2lSKmpfN1SwLsoAdzvK2k21AHPyCOpGHcWNuw?width=640&height=480" alt="Foto 103">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSFZxJup5GgQZrDUPKanvK0AQuQPzqhWuSNol1sjW-liHM?width=640&height=480" alt="Foto 104">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRLbRA3P2pxT7RGZcjCdl4SAY-U-OS-bEeBH-w9h3RAt6s?width=640&height=480" alt="Foto 105">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSSpCFaEZVtRKijDRmcWG3EAZLlOmg1GQcNuiCDYvHOlGY?width=640&height=480" alt="Foto 106">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQT8FiMrcMzOS7qXb_c4Tg4xAQVTXS2q2hQDUWRLSGgJgAc?width=640&height=480" alt="Foto 107">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQT8zxsjvB_oT4FQ6z71MBOBAS9lnSHzFL8BupMDstAXKzg?width=640&height=480" alt="Foto 108">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR3HVloRgaqQqMqK2qVltiJAbW72YV8F5NOecetiYAL1O4?width=640&height=480" alt="Foto 109">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSXVDTjEAz_RrsYOb3XBQygAaQ0VbDlFdkIZ5Nf8kbcVy0?width=640&height=480" alt="Foto 110">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRExj7Qx_7UTIYVLW6uwdpaAY3v9twolRSIt2feixFTKEw?width=640&height=480" alt="Foto 111">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQJhR6ajan2S77qObhfGSx8AXi6rEx1XkSnpsMaZQZ6yi0?width=640&height=480" alt="Foto 112">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQW9Gsu7PTUSL-m5hQQLqgUASrjqp7gKQ_gx8F7F79UDKo?width=640&height=480" alt="Foto 113">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQi8LIGaxKxT5BAz91WVU1YAdO2FLsF91Ioec9FRjUjy_U?width=640&height=480" alt="Foto 114">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR2zz8wuxIbQYixPifLLRziAbqbJ-llT-pz2FF3K6kuvTo?width=640&height=480" alt="Foto 115">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTq1jXXYu9GSalr8pMtmxNhARpAo0ZDY1ny-ZQTpKYoHB0?width=640&height=480" alt="Foto 116">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR8JbmhwtjPRIT1drvO0drnARcs84slFVrk7zIdh5dm9iQ?width=640&height=480" alt="Foto 117">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQS4zu6hQb-kTphlh3ulWEycAeDbgqPROabDaC3QbM4DcOs?width=640&height=480" alt="Foto 118">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQ7_8d9U_16RrzIu6Vb9Jj0AehEeIN3OocKTuMvCEFNvII?width=640&height=480" alt="Foto 119">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTNJTPYqtVKSIqvCblihfTbAdBYCJdsfNuAG9iu5vaez6o?width=640&height=480" alt="Foto 120">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSmZkvFz81dTbXXB018uGbOAVor4FI2L_Yz9kmDtItLAyo?width=640&height=480" alt="Foto 121">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSg5gKuBnnzS426eTkYZvYxAU8h8oTv79zubRYq_OHviUQ?width=640&height=480" alt="Foto 122">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTjfHs0QcqHQb9ISSVghxPuAVGJqpn1wk6uV1z33sfGYA4?width=640&height=480" alt="Foto 123">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQT89JWyIWMLS78wXIYWRKWuAT88jfxMJn-I-OUuI59DSfo?width=640&height=480" alt="Foto 124">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTcxC2FoifsS6eB1ImPUXCuAaY5u-5g6xV5OBPQVImPV3Y?width=640&height=480" alt="Foto 125">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTS8MfkUN03RKr8kkU0kFY8AbuCfH65-lUsYRYM2Ilqg8M?width=640&height=480" alt="Foto 126">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSNKMGahxW9QoxUym30rLALARlt2Zv8kbf7gf9Xmz8OjgY?width=640&height=480" alt="Foto 127">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRjBHY-91aVR5mdKdmPt0-yAczBwIjENwULdC-jfcj8UI4?width=640&height=480" alt="Foto 128">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTvyifCpqpfS6p3gSia6FcOAVzU_BHqKIYTnn_fxNWAYU0?width=640&height=480" alt="Foto 129">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSB6iHPwI8ERrvcS3XewxdMAWH2Fck5I-0djcfmrpNrzok?width=640&height=480" alt="Foto 130">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTXSCy-RTweRIVYMUm9-u29AYoLQl9GRciFeiyFisj5mgw?width=640&height=480" alt="Foto 131">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRcwgpf3j3tT6ooRL2qujtxAXF_8eoiYBFqoS4o_IYhGzY?width=640&height=480" alt="Foto 132">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQRI9FukNB8rR5twPDrgnBiVAQiiz50ZpFzBzxQJ6Ybi2II?width=640&height=480" alt="Foto 133">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSSNwdRFp3-Qa80aRuEKINgAeed0AJIZT2zu6m3jIiGSls?width=640&height=480" alt="Foto 134">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQR9ypw0LQhxQYpIUtUTrN99AXGoYAnq0PsU9s8O5DjzOks?width=640&height=480" alt="Foto 135">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQNxVBfw01NTanzEYePVmbOAYI74baYSV1doRND4RlJ89A?width=640&height=480" alt="Foto 136">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQTowQrTEWrFQbWRgICgiz0xAQZhwZ3J3flvl9T6n6iwEkI?width=2304&height=1728" alt="Foto 137">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQSM0eL47_etT7W3oruEab89AT7X5U20qXyFuE2680bdfP4?width=2304&height=1728" alt="Foto 138">
+          </div>
+          <div class="photo-card">
+            <img src="https://1drv.ms/i/c/2c74292426000e6e/IQQD2L-dzoGeS6lkSce3jYmJAYo73qTWt1TcDYtUNZWDiV8?width=2304&height=1728" alt="Foto 139">
           </div>
         </div>
 
-        <h3 class="sub-section-title">Videos de Coreografías</h3>
+        <h3 class="sub-section-title" id="titulo-videos">Videos de Coreografías</h3>
         <div class="video-grid">
           
           <div class="video-card">
-    <div class="video-wrapper">
-      <iframe 
-        src="https://1drv.ms/v/c/2c74292426000e6e/IQTdwfYDSASKRKe4VMM7_UsMATQIrCw7-AHY5dcYJM7oxSo?width=848&height=480" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-      </iframe>
-    </div>
-    <div class="video-card__info">
-      <h3>Coreografía Principal - Bloque 1</h3>
-      <p>Reproducción directa desde Google Drive sin consumo de espacio local.</p>
-      <a href="https://1drv.ms/v/c/2c74292426000e6e/IQTdwfYDSASKRKe4VMM7_UsMATQIrCw7-AHY5dcYJM7oxSo?width=848&height=480" class="download-media-btn" target="_blank">
-        <i class='bx bx-download'></i> Descargar Video
-      </a>
-    </div>
-  </div>
+            <div class="video-wrapper">
+              <iframe 
+                src="https://1drv.ms/v/c/2c74292426000e6e/IQTdwfYDSASKRKe4VMM7_UsMATQIrCw7-AHY5dcYJM7oxSo?width=848&height=480" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+               Bled</iframe>
+            </div>
+            <div class="video-card__info">
+              <h3>Coreografía Principal - Bloque 1</h3>
+              <p>Reproducción directa desde Google Drive sin consumo de espacio local.</p>
+              <a href="https://1drv.ms/v/c/2c74292426000e6e/IQTdwfYDSASKRKe4VMM7_UsMATQIrCw7-AHY5dcYJM7oxSo?width=848&height=480" class="download-media-btn" target="_blank">
+                <i class='bx bx-download'></i> Descargar Video
+              </a>
+            </div>
+          </div>
 
           <div class="video-card">
             <div class="video-wrapper">
-              <video src="video2.mp4" controls preload="metadata"></video>
+              <iframe 
+                src="https://1drv.ms/v/c/2c74292426000e6e/IQRNponIBq9ASLjbGzeskPQKAU9BYeztOUfDwWuuPRjeC0o?width=320&height=240" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+               Bled</iframe>
             </div>
             <div class="video-card__info">
-              <h3>Presentación Oficial - En Vivo</h3>
-              <p>Registro de la participación intergrupal en alta definición.</p>
-              <a href="https://drive.usercontent.google.com/download?id=14lYETcw0Wl_kWHY2SiW7D6lK5XLZpX1l&export=download&authuser=3&confirm=t&uuid=ba4b735d-90d5-44e0-b940-bdfaaf44cd7b&at=AAINaIIZD34QhcL6OG1NC36qSb9D:1781565681068" download="Presentacion_Oficial.mp4" class="download-media-btn">
+              <h3>Coreografía Principal - Bloque 1</h3>
+              <p>Reproducción directa desde Google Drive sin consumo de espacio local.</p>
+              <a href="https://1drv.ms/v/c/2c74292426000e6e/IQRNponIBq9ASLjbGzeskPQKAU9BYeztOUfDwWuuPRjeC0o?width=320&height=240" class="download-media-btn" target="_blank">
+                <i class='bx bx-download'></i> Descargar Video
+              </a>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe 
+                src="https://1drv.ms/v/c/2c74292426000e6e/IQR1rETEIHfGT4nmHDaHP-_8ASNTCGBnzNTI975VDmH6rPc?width=640&height=480" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+               Bled</iframe>
+            </div>
+            <div class="video-card__info">
+              <h3>Coreografía Principal - Bloque 1</h3>
+              <p>Reproducción directa desde Google Drive sin consumo de espacio local.</p>
+              <a href="https://1drv.ms/v/c/2c74292426000e6e/IQR1rETEIHfGT4nmHDaHP-_8ASNTCGBnzNTI975VDmH6rPc?width=640&height=480" class="download-media-btn" target="_blank">
+                <i class='bx bx-download'></i> Descargar Video
+              </a>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="video-wrapper">
+              <iframe 
+                src="https://1drv.ms/v/c/2c74292426000e6e/IQQTRGN4zZNVSog_NLaaJfMcARPrKHUgcn4qu4631MMUWto?width=640&height=480" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+               Bled</iframe>
+            </div>
+            <div class="video-card__info">
+              <h3>Coreografía Principal - Bloque 1</h3>
+              <p>Reproducción directa desde Google Drive sin consumo de espacio local.</p>
+              <a href="https://1drv.ms/v/c/2c74292426000e6e/IQQTRGN4zZNVSog_NLaaJfMcARPrKHUgcn4qu4631MMUWto?width=640&height=480" class="download-media-btn" target="_blank">
                 <i class='bx bx-download'></i> Descargar Video
               </a>
             </div>
@@ -133,7 +574,7 @@
     <section id="pistas" class="view">
       <section class="audio-section">
         <div class="section-heading">
-          <span class="eyebrow">Audio Cloud</span>
+          <span class="eyebrow">Audio</span>
           <h2>Pistas Musicales</h2>
           <p>Escucha los mixes oficiales del grupo de danza y descárgalos en tus dispositivos para ensayar en cualquier lugar.</p>
         </div>
@@ -298,8 +739,9 @@
 
   <footer class="footer">
     <div>
-      <strong>Dance Studio</strong>
-      <p>Espacio Multimedia & Almacenamiento © 2026</p>
+      <strong>G. C. D. Reina de los Angeles</strong>
+      <p>Realizado por: GLAMTECH © 2026</p>
+      <p>Contactos: 0998540450 / 0964061052</p>
     </div>
     <button onclick="mostrarSeccion('home')">
       Volver al inicio <i class='bx bx-up-arrow-alt'></i>
